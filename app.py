@@ -84,7 +84,7 @@ def main():
         
         with col1:
             st.subheader("Uploaded Image")
-            st.image(image, caption="Original Input", use_column_width=True)
+            st.image(image, caption="Original Input", use_container_width=True)
             
             # Preprocess the image
             flattened_input, processed_img_display = preprocess_image(image)
@@ -122,13 +122,13 @@ def main():
     
     with col3:
         if os.path.exists('loss_plot.png'):
-            st.image('loss_plot.png', caption="Loss vs. Epoch", use_column_width=True)
+            st.image('loss_plot.png', caption="Loss vs. Epoch", use_container_width=True)
         else:
             st.info("Performance plot `loss_plot.png` is not generated yet.")
             
     with col4:
         if os.path.exists('confusion_matrix.png'):
-            st.image('confusion_matrix.png', caption="Confusion Matrix", use_column_width=True)
+            st.image('confusion_matrix.png', caption="Confusion Matrix", use_container_width=True)
         else:
             st.info("Confusion matrix `confusion_matrix.png` is not generated yet.")
 
